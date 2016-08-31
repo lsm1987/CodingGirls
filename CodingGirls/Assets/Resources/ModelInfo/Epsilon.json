@@ -1,0 +1,9 @@
+{
+    "_modelName": "Epsilon",
+    "_settingPath": "Epsilon_free/Epsilon_free.model.json",
+    "_planeSize": 2.0,
+    "_layout": {
+        "_scale": 1.0,
+        "_y": 0.85
+    }
+}

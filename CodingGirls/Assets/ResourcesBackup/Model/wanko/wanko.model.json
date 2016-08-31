@@ -1,0 +1,40 @@
+{
+  "type":"Live2D Model Setting",
+  "name":"wanko",
+  "model":"wanko.moc",
+  "textures": [
+    "wanko.1024/texture_00.png"
+  ],
+  "expressions": [
+    {"name": "empty","file": "expressions/f01.exp.json"}
+  ],
+  "motions": {
+    "idle_01": [
+      { "file": "motions/idle_01.mtn" }
+    ],
+    "idle_02": [
+      { "file": "motions/idle_02.mtn" }
+    ],
+    "idle_03": [
+      { "file": "motions/idle_03.mtn" }
+    ],
+    "idle_04": [
+      { "file": "motions/idle_04.mtn" }
+    ],
+    "shake_01": [
+      { "file": "motions/shake_01.mtn" }
+    ],
+    "shake_02": [
+      { "file": "motions/shake_02.mtn" }
+    ],
+    "touch_01": [
+      { "file": "motions/touch_01.mtn" }
+    ],
+    "touch_02": [
+      { "file": "motions/touch_02.mtn" }
+    ],
+    "touch_03": [
+      { "file": "motions/touch_03.mtn" }
+    ]
+  }
+}

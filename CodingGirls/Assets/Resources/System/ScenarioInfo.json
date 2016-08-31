@@ -1,0 +1,29 @@
+{
+  "_defaultMainFileName": "Scenario001",
+  "_nameColors": [
+    {
+      "_name": "나래",
+      "_color": {
+        "r": 255,
+        "g": 167,
+        "b": 152,
+        "a": 255
+      }
+    },
+    {
+      "_name": "박하",
+      "_color": {
+        "r": 137,
+        "g": 210,
+        "b": 255,
+        "a": 255
+      }
+    }
+  ],
+  "_defaultNameColor": {
+    "r": 255,
+    "g": 255,
+    "b": 255,
+    "a": 255
+  }
+}

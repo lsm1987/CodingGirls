@@ -1,0 +1,9 @@
+{
+    "_modelName": "Wanko",
+    "_settingPath": "wanko/wanko.model.json",
+    "_planeSize": 2.0,
+    "_layout": {
+        "_scale": 1.0,
+        "_y": 1.0
+    }
+}
