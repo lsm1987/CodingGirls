@@ -94,7 +94,7 @@ PlayerSettings:
     16:9: 1
     Others: 0
   bundleIdentifier: com.lsm1987.CodingGirls
-  bundleVersion: 0.9
+  bundleVersion: 1.0
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   xboxOneDisableKinectGpuReservation: 0
