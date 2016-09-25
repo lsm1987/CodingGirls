@@ -1,6 +1,6 @@
 # 가르져춰! 코딩 소녀
 
-![GraphicImage](https://github.com/lsm1987/CodingGirls/blob/master/Files/Images/GraphicImage.png)
+![GraphicImage](Files/Images/GraphicImage.png)
 
 코딩 소녀들과 함께하는 프로그래밍 이야기!
 
@@ -16,9 +16,9 @@ Live2D 로 움직이는 귀여운 코딩 소녀와 함께라면 어려운 프로
 
 ## Screenshot
 
-![ScreenShot03](https://github.com/lsm1987/CodingGirls/blob/master/Files/Images/ScreenShot03.png)
-![ScreenShot04](https://github.com/lsm1987/CodingGirls/blob/master/Files/Images/ScreenShot04.png)
-![ScreenShot02](https://github.com/lsm1987/CodingGirls/blob/master/Files/Images/ScreenShot02.png)
+![ScreenShot03](Files/Images/ScreenShot03.png)
+![ScreenShot04](Files/Images/ScreenShot04.png)
+![ScreenShot02](Files/Images/ScreenShot02.png)
 
 
 ## Movie
