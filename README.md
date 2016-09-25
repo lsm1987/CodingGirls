@@ -25,3 +25,7 @@ Live2D 로 움직이는 귀여운 코딩 소녀와 함께라면 어려운 프로
 
 * [유니티에서 foreach를 쓰면 안된다는게 정말인가요? 전편](https://www.youtube.com/watch?v=41syxzusX0w)
 * [유니티에서 foreach를 쓰면 안된다는게 정말인가요? 후편](https://www.youtube.com/watch?v=WgEz6DutNkM)
+
+## 참고
+
+* [유니티 버전](CodingGirls/ProjectSettings/ProjectVersion.txt)
