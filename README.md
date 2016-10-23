@@ -1,6 +1,6 @@
 # 가르져춰! 코딩 소녀
 
-![GraphicImage](https://github.com/lsm1987/CodingGirls/blob/master/Files/Images/GraphicImage.png)
+![GraphicImage](Files/Images/GraphicImage.png)
 
 코딩 소녀들과 함께하는 프로그래밍 이야기!
 
@@ -16,12 +16,16 @@ Live2D 로 움직이는 귀여운 코딩 소녀와 함께라면 어려운 프로
 
 ## Screenshot
 
-![ScreenShot03](https://github.com/lsm1987/CodingGirls/blob/master/Files/Images/ScreenShot03.png)
-![ScreenShot04](https://github.com/lsm1987/CodingGirls/blob/master/Files/Images/ScreenShot04.png)
-![ScreenShot02](https://github.com/lsm1987/CodingGirls/blob/master/Files/Images/ScreenShot02.png)
+![ScreenShot03](Files/Images/ScreenShot03.png)
+![ScreenShot04](Files/Images/ScreenShot04.png)
+![ScreenShot02](Files/Images/ScreenShot02.png)
 
 
 ## Movie
 
 * [유니티에서 foreach를 쓰면 안된다는게 정말인가요? 전편](https://www.youtube.com/watch?v=41syxzusX0w)
 * [유니티에서 foreach를 쓰면 안된다는게 정말인가요? 후편](https://www.youtube.com/watch?v=WgEz6DutNkM)
+
+## 참고
+
+* [유니티 버전](CodingGirls/ProjectSettings/ProjectVersion.txt)
