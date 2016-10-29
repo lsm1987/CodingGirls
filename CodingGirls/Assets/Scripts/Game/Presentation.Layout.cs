@@ -37,6 +37,14 @@ namespace Game
             }
 
             /// <summary>
+            /// 활성화 상태로 지정
+            /// </summary>
+            public void SetActive(bool active)
+            {
+                _root.SetActive(active);
+            }
+
+            /// <summary>
             /// 지정한 이름의 텍스트를 찾는다.
             /// </summary>
             /// <param name="name">텍스트 이름</param>

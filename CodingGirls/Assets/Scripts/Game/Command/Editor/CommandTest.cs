@@ -607,6 +607,28 @@ namespace Game
 
                 Assert.AreEqual(null, error);
             }
+
+            [Test]
+            public void PresentationLayoutParseTest()
+            {
+                {
+                    string param = "";
+                    CommandError error;
+                    var cmd = new Command_PresentationLayout();
+                    cmd.Parse(param, out error);
+
+                    Assert.AreEqual(null, error);
+                }
+                {
+                    string param = "TitleSlide";
+                    CommandError error;
+                    var cmd = new Command_PresentationLayout();
+                    cmd.Parse(param, out error);
+
+                    Assert.AreEqual(null, error);
+                    Assert.AreEqual("TitleSlide", cmd._LayoutName);
+                }
+            }
         }
         #endregion // Presentation
     }

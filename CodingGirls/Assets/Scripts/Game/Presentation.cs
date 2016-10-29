@@ -14,6 +14,8 @@ namespace Game
         [SerializeField]
         private List<Layout> _layouts;
 
+        private Layout _activeLayout;   // 활성화된 레이아웃
+
         /// <summary>
         /// 지정한 이름의 레이아웃을 찾는다.
         /// </summary>
@@ -33,6 +35,36 @@ namespace Game
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// 레이아웃을 비운다.
+        /// </summary>
+        public void ClearLayout()
+        {
+            if (_activeLayout != null)
+            {
+                _activeLayout.SetActive(false);
+                _activeLayout = null;
+            }
+        }
+
+        /// <summary>
+        /// 레이아웃을 지정한다.
+        /// </summary>
+        public void SetLayout(string name)
+        {
+            ClearLayout();
+
+            var layout = GetLayout(name);
+            if (layout == null)
+            {
+                Debug.LogError("[Presentation.SetLayout.NotExistLayout]" + name);
+                return;
+            }
+
+            layout.SetActive(true);
+            _activeLayout = layout;
         }
     }
 }
