@@ -60,5 +60,15 @@ namespace Game
         {
             _texts.Remove(name);
         }
+
+        /// <summary>
+        /// 등록된 텍스트 찾기
+        /// </summary>
+        public Text GetText(string name)
+        {
+            Text text;
+            _texts.TryGetValue(name, out text);
+            return text;
+        }
     }
 }

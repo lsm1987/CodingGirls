@@ -133,6 +133,7 @@ public static class StringDefine
         public const string _stringGroup = @"(.+)";
         public const string _emptyString = @"^$";
         public const string _anyString = @".*";
+        public const string _anyStringGroup = @"(.*)";
         public const string _vector3Group = @"([(]" + _float + "," + _float + "," + _float + "[)])";
         public const string _vector3InnerGroup = @"(?:[(]" + _floatGroup + "," + _floatGroup + "," + _floatGroup + "[)])";
         public const string _vector2Group = @"([(]" + _float + "," + _float + "[)])";
