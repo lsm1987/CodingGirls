@@ -654,6 +654,19 @@ namespace Game
                     Assert.AreEqual("Awesome Text", cmd._Text);
                 }
             }
+
+            [Test]
+            public void PresentationTextAppendParseTest()
+            {
+                string param = "Text \\nAwesome Text";
+                CommandError error;
+                var cmd = new Command_PresentationTextAppend();
+                cmd.Parse(param, out error);
+
+                Assert.AreEqual(null, error);
+                Assert.AreEqual("Text", cmd._TextName);
+                Assert.AreEqual("\nAwesome Text", cmd._Text);
+            }
         }
         #endregion // Presentation
     }

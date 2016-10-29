@@ -161,4 +161,49 @@ namespace Game
             _Text = StringDefine.ReplaceEscape(groups[2].Value);
         }
     }
+
+    /// <summary>
+    /// 프레젠테이션 텍스트 덧붙임
+    /// </summary>
+    public class Command_PresentationTextAppend : Command
+    {
+        public const string _ID = "pttextappend";
+        public string _TextName { get; private set; }
+        public string _Text { get; private set; }
+
+        public override void Do()
+        {
+            if (GameSystem._Instance._Presentation == null)
+            {
+                Debug.LogError("[Command_PresentationTextAppend.Do.PtNotExist]");
+                return;
+            }
+
+            var text = GameSystem._Instance._Presentation.GetText(_TextName);
+            if (text == null)
+            {
+                Debug.LogError("[Command_PresentationTextAppend.Do.PtTextNotExist]" + _TextName);
+                return;
+            }
+
+            text.text += _Text;
+        }
+
+        protected override string _ParsePattern
+        {
+            get
+            {
+                return "^" + StringDefine.Pattern._wordGroup
+                    + " " + StringDefine.Pattern._anyStringGroup
+                    + "$";
+            }
+        }
+
+        protected override void SetValue(GroupCollection groups, out CommandError error)
+        {
+            error = null;
+            _TextName = groups[1].Value;
+            _Text = StringDefine.ReplaceEscape(groups[2].Value);
+        }
+    }
 }
