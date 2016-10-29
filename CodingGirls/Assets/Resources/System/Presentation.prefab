@@ -132,6 +132,7 @@ GameObject:
   - 224: {fileID: 224000012287656766}
   - 223: {fileID: 223000010229773470}
   - 114: {fileID: 114000012298796388}
+  - 114: {fileID: 114000010027843536}
   m_Layer: 0
   m_Name: Presentation
   m_TagString: Untagged
@@ -207,6 +208,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114000010027843536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013550818046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c700c8ffb407e1243b57136b5a4aed05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layouts:
+  - _root: {fileID: 1000013445480202}
+    _texts:
+    - {fileID: 114000010308491712}
+    - {fileID: 114000011397304412}
+  - _root: {fileID: 1000010166608960}
+    _texts:
+    - {fileID: 114000011197934100}
+    - {fileID: 114000012006546028}
+  - _root: {fileID: 1000012180135694}
+    _texts:
+    - {fileID: 114000012747394372}
+    - {fileID: 114000013224634122}
 --- !u!114 &114000010308491712
 MonoBehaviour:
   m_ObjectHideFlags: 1
