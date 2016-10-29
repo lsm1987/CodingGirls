@@ -18,7 +18,7 @@ namespace Game
                 return;
             }
 
-            var prefab = Resources.Load<Presentation>(Define._systemRoot + "/Presentation");
+            var prefab = Resources.Load<Presentation>(Define._presentationRoot + "/Presentation");
             if (prefab == null)
             {
                 Debug.LogError("[Command_Presentation.Do.CannotLoadPrefab]");

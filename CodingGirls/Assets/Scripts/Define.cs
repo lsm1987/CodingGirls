@@ -50,6 +50,7 @@
     public const string _backgroundRoot = "Texture";
     public const string _spritePrefabPath = _systemRoot + "/Sprite";
     public const string _spriteRoot = "Texture/Sprite";
+    public const string _presentationRoot = _systemRoot + "/Presentation";
 
     public const string _mainModelName = "Epsilon";
     public static class Motion
