@@ -17,24 +17,33 @@ namespace Game
         private List<Text> _texts;
 
         /// <summary>
-        /// 지정한 이름의 텍스트를 찾는다.
+        /// 프레젠테이션에 레이아웃 텍스트 등록
         /// </summary>
-        /// <param name="name">텍스트 이름</param>
-        /// <returns>찾지 못하면 null</returns>
-        public Text GetText(string name)
+        public void RegisterTexts(Presentation presentation)
         {
             if (_texts != null)
             {
                 for (int i = 0; i < _texts.Count; ++i)
                 {
-                    if (_texts[i].name == name)
-                    {
-                        return _texts[i];
-                    }
+                    var text = _texts[i];
+                    presentation.RegisterText(text.name, text);
                 }
             }
+        }
 
-            return null;
+        /// <summary>
+        /// 프레젠테이션에서 레이아웃 텍스트 등록 해제
+        /// </summary>
+        public void UnregisterTexts(Presentation presentation)
+        {
+            if (_texts != null)
+            {
+                for (int i = 0; i < _texts.Count; ++i)
+                {
+                    var text = _texts[i];
+                    presentation.UnregisterText(text.name);
+                }
+            }
         }
     }
 }
