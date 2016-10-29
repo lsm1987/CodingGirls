@@ -19,6 +19,7 @@ namespace Game
         public ModelManager _ModelManager { get { return _modelManager; } }
         private SpriteManager _spriteManager = new SpriteManager();
         public SpriteManager _SpriteManager { get { return _spriteManager; } }
+        public Presentation _Presentation { get; set; }
         public bool _DoingTask { get; set; }
         public bool _IsClicked { get; private set; }
         private delegate void UpdateFunc();

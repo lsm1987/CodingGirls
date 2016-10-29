@@ -582,5 +582,32 @@ namespace Game
                 Assert.AreNotEqual(null, error);
             }
         }
+
+        #region Presentation
+        public class PresentationTest
+        {
+            [Test]
+            public void PresentationParseTest()
+            {
+                string param = "";
+                CommandError error;
+                var cmd = new Command_Presentation();
+                cmd.Parse(param, out error);
+
+                Assert.AreEqual(null, error);
+            }
+
+            [Test]
+            public void RemovePresentationParseTest()
+            {
+                string param = "";
+                CommandError error;
+                var cmd = new Command_RemovePresentation();
+                cmd.Parse(param, out error);
+
+                Assert.AreEqual(null, error);
+            }
+        }
+        #endregion // Presentation
     }
 }
