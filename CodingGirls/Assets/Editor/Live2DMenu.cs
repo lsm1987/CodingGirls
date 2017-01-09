@@ -38,7 +38,6 @@ public static class Live2DMenu
 
         mesh.RecalculateNormals();  //  法線の再計算
         mesh.RecalculateBounds();   //  バウンディングボリュームの再計算
-        mesh.Optimize();
 
         if (!System.IO.File.Exists("Assets/Resources/Live2D/" + filename + ".asset"))
         {
