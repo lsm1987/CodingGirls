@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 
 	Shader "Live2D/MultCullMasked" {
 		
@@ -42,7 +44,7 @@
 				v2f vert(appdata_base v ,float4 color:COLOR)
 				{
 					v2f OUT;
-					OUT.position = mul(UNITY_MATRIX_MVP, v.vertex);
+					OUT.position = UnityObjectToClipPos(v.vertex);
 					OUT.clipPos = mul(_ClipMatrix, v.vertex);
 			#if UNITY_UV_STARTS_AT_TOP
 			        OUT.clipPos.y = 1.0 - OUT.clipPos.y ;// invert

@@ -1,4 +1,6 @@
-﻿Shader "Custom/TransparentGradation"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/TransparentGradation"
 {
 	Properties
 	{
@@ -48,7 +50,7 @@
 			v2f vert(appdata_t IN)
 			{
 				v2f OUT;
-				OUT.vertex = mul(UNITY_MATRIX_MVP, IN.vertex);
+				OUT.vertex = UnityObjectToClipPos(IN.vertex);
 				OUT.texcoord = IN.texcoord;
 				OUT.color = IN.color * lerp(_Color, _Color2, IN.texcoord.x);
 				return OUT;
