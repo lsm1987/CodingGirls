@@ -43,7 +43,7 @@ namespace Game
             }
 
             _sprites.Remove(name);
-            Object.DestroyObject(spr.gameObject);
+            Object.Destroy(spr.gameObject);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Game
         {
             foreach(var spr in _sprites.Values)
             {
-                Object.DestroyObject(spr.gameObject);
+                Object.Destroy(spr.gameObject);
             }
             _sprites.Clear();
         }
