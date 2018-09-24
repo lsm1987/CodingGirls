@@ -5,6 +5,10 @@ using System.Text.RegularExpressions;
 
 namespace Game
 {
+	/// <summary>
+	/// 대기
+	/// 시간 0 또는 미지정 시 클릭 대기
+	/// </summary>
     public class Command_Wait : Command
     {
         public const string _ID = "wait";
@@ -12,14 +16,21 @@ namespace Game
 
         public override void Do()
         {
-            GameSystem._Instance.Wait(_Duration);
+            if (Mathf.Approximately(_Duration, 0.0f))
+            {
+                GameSystem._Instance.WaitClick();
+            }
+            else
+            {
+                GameSystem._Instance.Wait(_Duration);
+            }
         }
 
         protected override string _ParsePattern
         {
             get
             {
-                return "^" + StringDefine.Pattern._floatGroup + "$";
+                return "^(?:" + StringDefine.Pattern._floatGroup + ")?$";
             }
         }
 

@@ -172,6 +172,19 @@ namespace Game
             }
         }
 
+        public void WaitClick()
+        {
+            RegisterTask(WaitClickTask());
+        }
+
+        private IEnumerator WaitClickTask()
+        {
+            while (!_IsClicked)
+            {
+                yield return null;
+            }
+        }
+
         public void LoadTitleScene()
         {
             SceneManager.LoadScene(Define.SceneName._title);

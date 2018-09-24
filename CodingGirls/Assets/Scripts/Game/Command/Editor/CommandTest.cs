@@ -210,13 +210,24 @@ namespace Game
         [Test]
         public void WaitParseTest()
         {
-            string param = "0.5";
-            CommandError error;
-            var cmd = new Command_Wait();
-            cmd.Parse(param, out error);
+            {
+                string param = "0.5";
+                CommandError error;
+                var cmd = new Command_Wait();
+                cmd.Parse(param, out error);
 
-            Assert.AreEqual(null, error);
-            Assert.AreEqual(0.5f, cmd._Duration);
+                Assert.AreEqual(null, error);
+                Assert.AreEqual(0.5f, cmd._Duration);
+            }
+            {
+                string param = "";
+                CommandError error;
+                var cmd = new Command_Wait();
+                cmd.Parse(param, out error);
+
+                Assert.AreEqual(null, error);
+                Assert.AreEqual(0.0f, cmd._Duration);
+            }
         }
 
         [Test]
