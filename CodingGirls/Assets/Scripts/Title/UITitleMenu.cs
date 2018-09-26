@@ -14,7 +14,15 @@ public class UITitleMenu : UIWindow
     {
         _btnStart.onClick.AddListener(OnClickStart);
         _btnAbout.onClick.AddListener(OnClickAbout);
-        _btnExit.onClick.AddListener(OnClickExit);
+
+        if (IsNeedExitMenu())
+        {
+            _btnExit.onClick.AddListener(OnClickExit);
+        }
+        else
+        {
+            _btnExit.gameObject.SetActive(false);
+        }
     }
 
     private void OnClickStart()
@@ -40,5 +48,10 @@ public class UITitleMenu : UIWindow
     private void PlaySelectSound()
     {
         SoundManager._Instance.PlaySound(Define._menuSelectSound);
+    }
+
+    private bool IsNeedExitMenu()
+    {
+        return Application.platform != RuntimePlatform.IPhonePlayer;
     }
 }
