@@ -9,7 +9,7 @@ namespace Game
     /// <summary>
     /// 선택지의 한 항목 UI
     /// </summary>
-    public class UISelectItem : UIWindow, IPointerEnterHandler, IPointerExitHandler
+    public class UISelectItem : UIWindow, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         [SerializeField]
         private Image _bg;
@@ -70,16 +70,13 @@ namespace Game
         public void OnPointerExit(PointerEventData ped)
         {
             //Debug.Log("OnPointerExit " + _text.text + " " + Time.time.ToString());
+            _onPointerExit();
+        }
 
-            if (gameObject == ped.pointerCurrentRaycast.gameObject)
-            {
-                // 이 오브젝트 위에서 손을 뗌
-                _onClick();
-            }
-            else
-            {
-                _onPointerExit();
-            }
+        public void OnPointerClick(PointerEventData pointerEventData)
+        {
+            //Debug.Log("OnPointerClick " + _text.text + " " + Time.time.ToString());
+            _onClick();
         }
 
         public void SetPointerEntered()
