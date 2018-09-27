@@ -28,6 +28,7 @@ namespace Game
         private void Initialize()
         {
             _Instance = this;
+            App.AppSystem.TryInitializeApplication();
             SoundManager.Create();
             InitializeUIManager();
             InitializeBackground();

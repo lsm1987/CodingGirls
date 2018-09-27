@@ -11,6 +11,7 @@ public class TitleSystem : MonoBehaviour
     private void Initialize()
     {
         _Instance = this;
+        App.AppSystem.TryInitializeApplication();
         SoundManager.Create();
         InitializeUIManager();
     }
