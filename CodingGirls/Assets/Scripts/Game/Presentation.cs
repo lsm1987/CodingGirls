@@ -12,6 +12,14 @@ namespace Game
         private PresentationLayout _activeLayout;   // 활성화된 레이아웃
         private Dictionary<string, Text> _texts = new Dictionary<string, Text>();    // 등록된 텍스트들
 
+        private void Awake()
+        {
+            // 캔버스 크기를 월드 크기에 맞춤
+            RectTransform rectTransform = GetComponent<RectTransform>();
+            float scale = GameSystem._ReferenceWorldHeight / rectTransform.rect.height;
+            rectTransform.localScale = new Vector3(scale, scale, scale);
+        }
+
         /// <summary>
         /// 레이아웃을 비운다.
         /// </summary>

@@ -24,12 +24,36 @@ namespace Game
         public bool _IsClicked { get; private set; }
         private delegate void UpdateFunc();
         private UpdateFunc _updateHandle = null;
+        private static int _ReferenceResolutionWidth { get { return 1280; } }
+        private static int _ReferenceResolutionHeight { get { return 720; } }
+
+        /// <summary>
+        /// 기준 해상도 비율. 너비/높이
+        /// </summary>
+        private static float _ReferenceResolutionRatio
+        {
+            get
+            {
+                return (float)_ReferenceResolutionWidth / _ReferenceResolutionHeight;
+            }
+        }
+
+        public static float _ReferenceWorldHeight { get { return 2.0f; } }
+
+        private static float _ReferenceWorldWidth
+        {
+            get
+            {
+                return _ReferenceWorldHeight * _ReferenceResolutionRatio;
+            }
+        }
 
         private void Initialize()
         {
             _Instance = this;
             App.AppSystem.TryInitializeApplication();
             SoundManager.Create();
+            InitializeCamera();
             InitializeUIManager();
             InitializeBackground();
             InitializeForeground();
@@ -63,6 +87,17 @@ namespace Game
         private void Update()
         {
             _updateHandle();
+        }
+
+        private void InitializeCamera()
+        {
+            if (Camera.main.aspect < _ReferenceResolutionRatio)
+            {
+                // 카메라 가로 비율이 기준보다 작다면
+                // 예: 아이패드 프로 = 4:3, 기준 = 16:9
+                // 카메라 가로가 기준 가로를 커버할 수 있도록
+                Camera.main.orthographicSize = _ReferenceWorldWidth / 2.0f / Camera.main.aspect;
+            }
         }
 
         private void InitializeUIManager()

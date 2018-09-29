@@ -36,17 +36,19 @@ namespace Game
             float oriRatio = oriWidth / oriHeight;
 
             float scale = 1.0f;
-            if (camRatio > oriRatio)
+
+            if (camRatio >= oriRatio)
             {
                 // 화면의 가로 비율이 원본 배경 가로 비율보다 큼
                 // 예: 아이폰X = 19.5:9, 배경 = 16:9
-                // 원본 배경 가로가 화면에 맞도록 원본 스케일 조정
+                // 원본 배경 가로가 화면을 채우도록 원본 스케일 조정
                 scale = camWidth / oriWidth;
             }
             else
             {
                 // 예: 아이패드 프로 = 4:3, 배경 = 16:9
-                scale = camHeight / oriHeight;
+                // 원본 배경 세로가 기준 세로를 채우도록 원본 스케일 조정
+                scale = GameSystem._ReferenceWorldHeight / oriHeight;
             }
 
             float scaledWidth = oriWidth * scale;
