@@ -21,7 +21,7 @@ namespace Game
 
             Vector2 rightTopAnchor = new Vector2(
                 (Screen.safeArea.x + Screen.safeArea.width) / (float)Screen.width,
-                1.0f - (Screen.safeArea.y / (float)Screen.height)
+                (Screen.safeArea.y + Screen.safeArea.height) / (float)Screen.height
             );
 
             RectTransform rectTransform = GetComponent<RectTransform>();
