@@ -40,5 +40,13 @@ namespace Game
             System.IO.File.WriteAllText(Application.dataPath + "/Resources/" + Define._scenarioListPath + ".json", jsonString);
             AssetDatabase.Refresh();
         }
+
+        [MenuItem("Game/Take Screenshot")]
+        private static void TakeScreenshot()
+        {
+            string path = System.IO.Path.Combine(Application.persistentDataPath, "EditorScreenshot.png");
+            ScreenCapture.CaptureScreenshot(path);
+            Debug.Log("Screenshot captured to " + path);
+        }
     }
 }
