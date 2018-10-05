@@ -42,7 +42,7 @@ namespace Game
         public void AddItem(string text, string labelName)
         {
             int itemIdx = _items.Count;
-            UISelectItem itemUI = UIManager.OpenWindow(_itemUIPrefab, _Trans) as UISelectItem;
+            UISelectItem itemUI = global::UIManager.CreateWidget<UISelectItem>(_itemUIPrefab, _Trans);
             itemUI.SetText(text);
             itemUI.SetEventListener(
                 delegate { OnPointerEnterItem(itemIdx); }

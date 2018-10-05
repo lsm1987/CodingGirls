@@ -9,7 +9,7 @@ namespace Game
     /// <summary>
     /// 선택지의 한 항목 UI
     /// </summary>
-    public class UISelectItem : UIWindow, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+    public class UISelectItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         [SerializeField]
         private Image _bg;

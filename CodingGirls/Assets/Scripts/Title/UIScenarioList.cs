@@ -16,6 +16,16 @@ public class UIScenarioList : UIWindow
         _btnClose.onClick.AddListener(OnClickBack);
     }
 
+    public override bool OnKeyInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnClickBack();
+        }
+
+        return true;
+    }
+
     private void InitializeItems()
     {
         TextAsset loadedText = Resources.Load<TextAsset>(Define._scenarioListPath);
@@ -29,7 +39,7 @@ public class UIScenarioList : UIWindow
 
     private void AddItem(ScenarioList.Item item)
     {
-        UIScenarioItem itemUI = UIManager.OpenWindow(_itemPrefab, _contents) as UIScenarioItem;
+        UIScenarioItem itemUI = UIManager.CreateWidget<UIScenarioItem>(_itemPrefab, _contents);
         itemUI.Set(item
             , delegate { OnItemSelected(item._ID); }
             );

@@ -14,6 +14,16 @@ public class UIAbout : UIWindow
         _btnClose.onClick.AddListener(OnClickBack);
     }
 
+    public override bool OnKeyInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnClickBack();
+        }
+
+        return true;
+    }
+
     private void OnClickBack()
     {
         PlaySelectSound();

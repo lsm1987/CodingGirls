@@ -87,6 +87,7 @@ namespace Game
         private void Update()
         {
             _updateHandle();
+            _UI.OnKeyInput();
         }
 
         private void InitializeCamera()

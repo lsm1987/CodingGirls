@@ -23,4 +23,13 @@ public class UIWindow : MonoBehaviour
     {
         _RectTrans.localPosition = new Vector3(pos.x, pos.y, _RectTrans.localPosition.z);
     }
+
+    /// <summary>
+    /// 키입력 처리. 상위 윈도우부터 호출함
+    /// </summary>
+    /// <returns>true: 하위 윈도우까지 키입력 처리를 전달하지 않는다.</returns>
+    public virtual bool OnKeyInput()
+    {
+        return false;
+    }
 }

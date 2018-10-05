@@ -12,6 +12,17 @@ namespace Game
             MoveAnchorToSafeArea();
         }
 
+        public override bool OnKeyInput()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                OnOptionClicked();
+                return true;
+            }
+
+            return false;
+        }
+
         private void MoveAnchorToSafeArea()
         {
             // 우상단이 Safe Area 우상단과 일치하도록 이동

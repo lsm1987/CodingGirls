@@ -22,6 +22,11 @@ public class TitleUIManager : UIManager
         OpenTitleMenu();
     }
 
+    protected override bool OnKeyInputOnComponent()
+    {
+        return _FadeOverlay.IsFading();
+    }
+
     public void OpenTitleMenu()
     {
         if (_titleMenu == null)

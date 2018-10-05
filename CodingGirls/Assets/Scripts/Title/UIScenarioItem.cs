@@ -5,7 +5,7 @@ using UnityEngine.Events;
 /// <summary>
 /// 시나리오 리스트의 한 항목
 /// </summary>
-public class UIScenarioItem : UIWindow
+public class UIScenarioItem : MonoBehaviour
 {
     [SerializeField]
     private Button _btn;

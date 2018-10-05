@@ -37,6 +37,11 @@ public class TitleSystem : MonoBehaviour
         Clear();
     }
 
+    private void Update()
+    {
+        _UIManager.OnKeyInput();
+    }
+
     private void InitializeUIManager()
     {
         _UIManager = FindObjectOfType<TitleUIManager>();
