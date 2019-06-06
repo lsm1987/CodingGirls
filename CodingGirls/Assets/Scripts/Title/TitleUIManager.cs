@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class TitleUIManager : UIManager
 {
     [SerializeField]
-    private Image _portrait;
+    private Image _portrait = null;
     [SerializeField]
-    private Transform _mainPanel;
+    private Transform _mainPanel = null;
     public FadeOverlay _FadeOverlay { get; private set; }
     private UITitleMenu _titleMenu = null;
     public UITitleMenu _TitleMenu { get { return _titleMenu; } }

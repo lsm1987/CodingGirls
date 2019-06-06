@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class UITitleMenu : UIWindow
 {
     [SerializeField]
-    private Button _btnStart;
+    private Button _btnStart = null;
     [SerializeField]
-    private Button _btnAbout;
+    private Button _btnAbout = null;
     [SerializeField]
-    private Button _btnExit;
+    private Button _btnExit = null;
 
     private void Awake()
     {

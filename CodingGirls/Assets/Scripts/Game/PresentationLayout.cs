@@ -14,7 +14,7 @@ namespace Game
         /// 레이아웃에 속한 텍스트들
         /// </summary>
         [SerializeField]
-        private List<Text> _texts;
+        private List<Text> _texts = default;
 
         /// <summary>
         /// 프레젠테이션에 레이아웃 텍스트 등록

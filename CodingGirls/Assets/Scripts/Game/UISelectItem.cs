@@ -12,19 +12,19 @@ namespace Game
     public class UISelectItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         [SerializeField]
-        private Image _bg;
+        private Image _bg = null;
         [SerializeField]
-        private Text _text;
+        private Text _text = null;
         [SerializeField]
-        private Color _enteredColor;
+        private Color _enteredColor = default;
         [SerializeField]
-        private Color _selectedColor;
+        private Color _selectedColor = default;
         [SerializeField]
-        private Color _selectedTextColor;
+        private Color _selectedTextColor = default;
         [SerializeField]
-        private Vector3 _enterScale;
+        private Vector3 _enterScale = default;
         [SerializeField]
-        private float _tweenTime;   // 온전히 트윈하는데 걸리는 시간
+        private float _tweenTime = 0.1f;   // 온전히 트윈하는데 걸리는 시간
         private Color _normalColor;
         private Vector3 _normalScale;
         private float _TweenSpeed { get { return 1.0f / _tweenTime; } }

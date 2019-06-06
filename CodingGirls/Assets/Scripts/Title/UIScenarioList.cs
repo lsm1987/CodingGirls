@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class UIScenarioList : UIWindow
 {
     [SerializeField]
-    private RectTransform _contents;
+    private RectTransform _contents = null;
     [SerializeField]
-    private GameObject _itemPrefab;
+    private GameObject _itemPrefab = null;
     [SerializeField]
-    private Button _btnClose;
+    private Button _btnClose = null;
 
     private void Awake()
     {

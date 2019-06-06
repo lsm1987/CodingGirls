@@ -3,7 +3,7 @@
 public class L2DModelCamera : MonoBehaviour
 {
     [SerializeField]
-    private Camera _cam;
+    private Camera _cam = null;
     private Camera _Cam { get { return _cam; } }
     private Transform _trans;
     private Transform _Trans { get { if (_trans == null) { _trans = transform; } return _trans; } }

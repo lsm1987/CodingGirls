@@ -4,9 +4,9 @@ using System.Collections.Generic;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource _bgmSource;
+    private AudioSource _bgmSource = null;
     [SerializeField]
-    private AudioSource _soundSource;
+    private AudioSource _soundSource = null;
     public static SoundManager _Instance { get; private set; }
     private Dictionary<string, AudioClip> _loadedClip = new Dictionary<string, AudioClip>();
 

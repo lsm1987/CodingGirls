@@ -5,7 +5,7 @@ namespace Game
     public class UIMenu : UIWindow
     {
         [SerializeField]
-        private GameObject _container;
+        private GameObject _container = null;
 
         private void Awake()
         {

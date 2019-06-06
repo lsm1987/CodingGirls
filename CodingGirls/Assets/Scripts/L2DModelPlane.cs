@@ -3,10 +3,10 @@
 public class L2DModelPlane : MonoBehaviour
 {
     [SerializeField]
-    private float _size;    // 메쉬 한 변의 길이
+    private float _size = 1.0f;    // 메쉬 한 변의 길이
     private float _Size { get { return _size; } }
     [SerializeField]
-    private Renderer _renderer;
+    private Renderer _renderer = null;
     private Transform _trans;
     private Transform _Trans { get { if (_trans == null) { _trans = transform; } return _trans; } }
 

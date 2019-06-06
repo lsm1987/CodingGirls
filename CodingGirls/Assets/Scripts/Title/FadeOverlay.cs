@@ -5,7 +5,7 @@ using System.Collections;
 public class FadeOverlay : MonoBehaviour
 {
     [SerializeField]
-    private Image _sprite;
+    private Image _sprite = null;
     private GameObject _go;
     private GameObject _Go { get { if (_go == null) { _go = gameObject; } return _go; } }
     private Coroutine _fadeCoroutine;

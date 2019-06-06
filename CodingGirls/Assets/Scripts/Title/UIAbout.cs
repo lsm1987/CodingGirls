@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UIAbout : UIWindow
 {
     [SerializeField]
-    private Button _btnClose;
+    private Button _btnClose = null;
 
     private void Awake()
     {

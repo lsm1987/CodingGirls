@@ -10,11 +10,11 @@ namespace Game
         private Transform _trans;
         public Transform _Trans { get { if (_trans == null) { _trans = transform; } return _trans; } }
         [SerializeField]
-        private GameObject _main;
+        private GameObject _main = null;
         [SerializeField]
-        private GameObject _gradationLeft;
+        private GameObject _gradationLeft = null;
         [SerializeField]
-        private GameObject _gradationRight;
+        private GameObject _gradationRight = null;
         private Renderer _mainRenderer;
 
         public void Initialize()

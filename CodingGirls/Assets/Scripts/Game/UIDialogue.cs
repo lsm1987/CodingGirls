@@ -7,13 +7,13 @@ namespace Game
     public class UIDialogue : UIWindow
     {
         [SerializeField]
-        private GameObject _name;
+        private GameObject _name = null;
         [SerializeField]
-        private Text _nameText;
+        private Text _nameText = null;
         [SerializeField]
-        private Text _text;
+        private Text _text = null;
         [SerializeField]
-        private GameObject _waitIcon;
+        private GameObject _waitIcon = null;
         private Coroutine _blinkWaitIconCoroutine = null;
 
         private void OnEnable()

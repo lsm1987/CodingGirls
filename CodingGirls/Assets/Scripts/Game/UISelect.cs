@@ -22,11 +22,11 @@ namespace Game
         }
 
         [SerializeField]
-        private GameObject _itemUIPrefab;
+        private GameObject _itemUIPrefab = null;
         [SerializeField]
-        private float _selectableDelay; // 선택가능상태 되기까지 딜레이
+        private float _selectableDelay = 0.0f; // 선택가능상태 되기까지 딜레이
         [SerializeField]
-        private float _closeDelay;
+        private float _closeDelay = 0.0f;
         private float _startTime;
         private List<Item> _items = new List<Item>();
         private const int _invalidIdx = -1;

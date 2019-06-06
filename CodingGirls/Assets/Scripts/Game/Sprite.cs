@@ -8,7 +8,7 @@ namespace Game
     public class Sprite : MonoBehaviour
     {
         [SerializeField]
-        private SpriteRenderer _renderer;
+        private SpriteRenderer _renderer = null;
         private const float _defaultZ = 0.5f;
 
         public void Initialize(UnityEngine.Sprite sprite)

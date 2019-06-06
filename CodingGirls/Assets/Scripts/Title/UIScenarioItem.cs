@@ -8,13 +8,13 @@ using UnityEngine.Events;
 public class UIScenarioItem : MonoBehaviour
 {
     [SerializeField]
-    private Button _btn;
+    private Button _btn = null;
     [SerializeField]
-    private Text _number;
+    private Text _number = null;
     [SerializeField]
-    private Text _title;
+    private Text _title = null;
     [SerializeField]
-    private Text _tag;
+    private Text _tag = null;
 
     public void Set(ScenarioList.Item item, UnityAction onClick)
     {
